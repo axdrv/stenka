@@ -98,11 +98,11 @@ body {
   width: 40%;
   margin: 160px auto;
   /* background: gray; */
-  background-image: url(./images/readDivBck1.png);
+  background-image: url(./images/readDivBck1.jpg);
   color: rgb(209, 122, 41);
   font-weight: bold;
   border: 24px solid firebrick;
-  border-image: url(./images/bbbbb.png) 48 round round;
+  border-image: url(./images/bbbbb.jpg) 48 round round;
   text-align: center;
 }
 .read > h1 {
