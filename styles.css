@@ -1,0 +1,509 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  position: relative;
+}
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+.read {
+  position: absolute;
+  font-family: sans-serif;
+  width: 40%;
+  margin: 160px auto;
+  /* background: gray; */
+  background-image: url(./images/readDivBck1.png);
+  color: rgb(209, 122, 41);
+  font-weight: bold;
+  border: 24px solid firebrick;
+  border-image: url(./images/bbbbb.png) 48 round round;
+  text-align: center;
+}
+.read > h1 {
+  font-size: 48px;
+  padding: 6px 0;
+}
+.read > p {
+  line-height: 1.1em;
+  padding: 0 4px;
+  padding-bottom: 8px;
+  font-size: 18px;
+  color: rgb(240, 240, 240);
+}
+.read > button {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px;
+  color: white;
+  border: none;
+  background: linear-gradient(
+    to right,
+    firebrick 3%,
+    #900 4%,
+    #900 96%,
+    firebrick 97%
+  );
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  background: url("./images/bbb.jpg");
+  background-size: 100%;
+}
+.Panels {
+  width: 10%;
+  /*height: 100%;*/ /*???I don't know reason of definition monitor*/
+}
+/* --- shareUsPanel --- */
+.panelText {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.socialIcons {
+  fill: #2c2cff;
+  stroke: white;
+  stroke-width: 0.4;
+  opacity: 0.3;
+}
+
+stop[offset="0%"] {
+  stop-color: #14090bb8;
+}
+stop[offset="20%"] {
+  stop-color: #1f1b068f;
+}
+stop[offset="30%"] {
+  stop-color: #2927139e;
+}
+stop[offset="50%"] {
+  stop-color: #d9c03b47;
+}
+
+stop[offset="90%"] {
+  stop-color: #000000f0;
+}
+
+/* --- end of shareUsPanel ---*/
+/*.popupRect { This is a shame firefox does not recognize this class, so I was required to insert styles via $.attr()?!?
+	fill: white;
+	stroke: red;
+	height: 24px;
+}*/
+/* --- tourch.svg --- */
+/* background-text */
+#tourchsvg {
+  width: 80%;
+  height: 100%;
+}
+
+#create,
+#inet,
+#unicspan {
+  font: bold 3vw sans-serif;
+}
+#maden {
+  font: bold 2vw sans-serif;
+}
+#maskSVGtext {
+  font: bold 6vw sans-serif;
+  animation: SVG 2s ease-in infinite alternate;
+}
+
+@keyframes SVG {
+  from {
+    fill: white;
+  }
+  to {
+    fill: black;
+  }
+}
+#mouseclick {
+  font: bold 1.6vw sans-serif;
+}
+
+#unictext {
+  font: 1.9vw Comic sans MS;
+  stroke-width: 0.2px;
+}
+
+#unicuse,
+.unicblink {
+  fill: transparent;
+}
+
+.unichover {
+  animation: colorize 200ms ease 3 forwards;
+}
+
+/* for LED light */
+stop[offset="80%"] {
+  stop-color: #d9c03b47;
+}
+
+#chooseLight text {
+  font: 24px sans-serif;
+  fill: #fff;
+  stroke: #e7c5b3;
+  stroke-width: 0.2px;
+}
+.textrect {
+  fill: #50515676;
+  stroke: #8e92f8;
+  stroke-width: 0.2px;
+}
+@keyframes colorize {
+  from {
+    fill: transparent;
+  }
+
+  33% {
+    stroke: white;
+    fill: url("#gradient1");
+  }
+  66% {
+    stroke: teal;
+    fill: url("#gradient2");
+  }
+  to {
+    stroke: white;
+    fill: url("#gradient3");
+  }
+}
+
+/* --- neon ---*/
+.neon-text {
+  fill: #2c2cff2e;
+  stroke: white;
+  stroke-width: 0.4;
+}
+.neon-light {
+  fill: none;
+  stroke: white;
+  stroke-width: 0.2;
+}
+.neon-blur {
+  fill: none;
+  stroke: #a58af696;
+  filter: url("#blur");
+}
+.neon-tube {
+  fill: none;
+  stroke: #8383fc42;
+  stroke-width: 6;
+}
+.neon {
+  opacity: 0;
+}
+
+.neonSwitchOn {
+  animation: neonSwitchOn 3s linear forwards;
+}
+
+@keyframes neonSwitchOn {
+  from {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0.7;
+  }
+  3% {
+    opacity: 0.7;
+  }
+  4% {
+    opacity: 0.3;
+  }
+  5% {
+    opacity: 0.3;
+  }
+  6% {
+    opacity: 0.7;
+  }
+  7% {
+    opacity: 0.7;
+  }
+  8% {
+    opacity: 0.3;
+  }
+  9% {
+    opacity: 0.3;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  11% {
+    opacity: 0.7;
+  }
+  12% {
+    opacity: 0.3;
+  }
+  13% {
+    opacity: 0.3;
+  }
+  14% {
+    opacity: 0.7;
+  }
+  15% {
+    opacity: 0.7;
+  }
+  16% {
+    opacity: 0.1;
+  }
+  45% {
+    opacity: 0.1;
+  }
+  46% {
+    opacity: 0.8;
+  }
+  59% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0;
+  }
+  61% {
+    opacity: 0.6;
+  }
+  79% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0;
+  }
+  82% {
+    opacity: 0.6;
+  }
+  83% {
+    opacity: 0.6;
+  }
+  84% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  86% {
+    opacity: 0.6;
+  }
+  87% {
+    opacity: 0;
+  }
+  88% {
+    opacity: 0.6;
+  }
+  99% {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* ---popups ---*/
+/* --- end of neon ---*/
+/* --- AboutUs Panel ---*/
+
+.st0 {
+  fill: #bfbfbf;
+}
+
+.st1 {
+  fill: #ffffff;
+}
+
+.st2 {
+  fill: #c41e4a;
+}
+
+.st3 {
+  fill: #f45671;
+}
+
+.st4 {
+  fill: #e03258;
+}
+
+.st5 {
+  fill: #a50c3b;
+}
+
+.st6 {
+  fill: #e0a41e;
+}
+
+.st7 {
+  fill: #fce379;
+}
+
+.st8 {
+  fill: #f5bd2f;
+}
+
+.st9 {
+  fill: #ce8f11;
+}
+
+.st10 {
+  fill: #084272;
+}
+
+.st11 {
+  fill: #3da7e3;
+}
+
+.st12 {
+  fill: #2b66a1;
+}
+
+.st13 {
+  fill: #24323d;
+}
+.st14 {
+  fill: #16896b;
+}
+
+.st15 {
+  fill: #49ebc8;
+}
+
+.st16 {
+  fill: #2ebc9a;
+}
+
+.st17 {
+  fill: #096047;
+}
+
+/* --- portrait devices ---*/
+/* Позиции  "x" и "y" svg элементов изменяются через javascript */
+@media (orientation: portrait) {
+  /* Изменяем отображение панелей и контента в колонку */
+  .wrapper {
+    flex-flow: column;
+  }
+  .Panels,
+  #tourchsvg {
+    width: 100%;
+  }
+  .Panels {
+    height: 10vh;
+  }
+  #tourchsvg {
+    height: 80vh;
+  }
+  /* Поворачиваем текст в панелях горизонтально */
+  .panelText {
+    writing-mode: horizontal-tb;
+    text-orientation: none;
+  }
+  /* увеличиваем текст маски */
+
+  #create,
+  #inet,
+  #unicspan {
+    font-size: 6vw;
+  }
+  #maden {
+    font-size: 4vw;
+  }
+  #maskSVGtext {
+    font-size: 12vw;
+  }
+  #unictext {
+    font-size: 5vw;
+  }
+}
