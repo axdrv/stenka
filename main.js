@@ -197,7 +197,7 @@ if (!isMobile()) {
 
   var techFolder = {
     context: "",
-    getfolder: $.get("/icons/AboutPanel/folderSVG.svg"),
+    getfolder: $.get("./icons/AboutPanel/folderSVG.svg"),
     folder: function() {
       return this.getfolder.responseText;
     },
